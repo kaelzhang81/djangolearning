@@ -14,6 +14,9 @@ class Person(object):
 		self.age = age
 		self.sex = sex 
 
+	def say(self):
+		return "I'm " + self.name 
+
 def index(req):
 	# user = {'name':'kael', 'age':'34', 'sex':'male'}	
 	user = Person('kael', 34, 'male')
