@@ -9,18 +9,18 @@ from django.shortcuts import render_to_response
 # 	ctx = Context({})
 # 	return HttpResponse(template.render(ctx))
 class Person(object):
-	def __init__(self, name, age, sex):
-		self.name = name
-		self.age = age
-		self.sex = sex 
+    def __init__(self, name, age, sex):
+        self.name = name
+        self.age = age
+        self.sex = sex 
 
-	def say(self):
-		return "I'm " + self.name 
+    def say(self):
+        return "I'm " + self.name 
 
 def index(req):
-	# user = {'name':'kael', 'age':'34', 'sex':'male'}	
-	user = Person('kael', 34, 'male')
-	book_list = ['python', 'c++', 'java']
-	return render_to_response('index.html', {'title':'my page', 'user':user, 'book':book_list})
+    user = {'name':'kael', 'age':'34', 'sex':'male'}	
+    # user = Person('kael', 34, 'male')
+    book_list = ['python', 'c++', 'java']
+    return render_to_response('index.html', {'title':'my page', 'user':user, 'book':book_list})
 
 

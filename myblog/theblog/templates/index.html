@@ -18,5 +18,11 @@
 {% else%}
 	<li>{{user.name}}是未成年人</li>	
 {% endif %}
+{% for book in book_list %}
+<li>{{book}}</li>
+{% endfor %}
+{% for value in user %}
+<li>{{value}}</li>
+{% endfor %}
 </body>
 </html>
