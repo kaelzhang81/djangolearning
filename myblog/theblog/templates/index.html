@@ -18,11 +18,11 @@
 {% else%}
 	<li>{{user.name}}是未成年人</li>	
 {% endif %}
-{% for book in book_list %}
-<li>{{book}}</li>
+{% for onebook in book %}
+<li>{{onebook}}</li>
 {% endfor %}
-{% for value in user %}
-<li>{{value}}</li>
+{% for key,value in user.items %}
+<li>{{forloop.counter}}.{{key}}:{{value}}</li>
 {% endfor %}
 </body>
 </html>
