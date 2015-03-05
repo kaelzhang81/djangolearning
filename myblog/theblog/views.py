@@ -17,6 +17,7 @@ class Person(object):
 def index(req):
 	# user = {'name':'kael', 'age':'34', 'sex':'male'}	
 	user = Person('kael', 34, 'male')
-	return render_to_response('index.html', {'title':'my page', 'user':user})
+	book_list = ['python', 'c++', 'java']
+	return render_to_response('index.html', {'title':'my page', 'user':user, 'book':book_list})
 
 
