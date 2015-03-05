@@ -13,5 +13,10 @@
 <li>book1: {{book.0}}</li>
 <li>book2: {{book.1}}</li>
 <li>book3: {{book.2}}</li>
+{% if user.age >= 18%}
+	<li>{{user.name}}是成年人</li>	
+{% else%}
+	<li>{{user.name}}是未成年人</li>	
+{% endif %}
 </body>
 </html>
